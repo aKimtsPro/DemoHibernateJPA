@@ -20,6 +20,7 @@ public class Course {
     private int nbrTours;
 
     @ManyToMany
+    @JoinTable(name = "participe")
     private Collection<Participation> participations;
 
     public int getId() {
