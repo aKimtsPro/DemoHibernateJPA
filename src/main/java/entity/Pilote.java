@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class Pilote {
     private Voiture voiture;
 
     @OneToMany(mappedBy = "pilote")
-    private Collection<Participation> participations;
+    private Collection<Participation> participations = new ArrayList<>();
 
 
     public Voiture getVoiture() {

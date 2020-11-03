@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -21,7 +22,7 @@ public class Course {
 
     @ManyToMany
     @JoinTable(name = "participe")
-    private Collection<Participation> participations;
+    private Collection<Participation> participations = new ArrayList<>();
 
     public int getId() {
         return id;

@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -19,7 +20,7 @@ public class Participation {
     private Voiture voiture;
 
     @ManyToMany(mappedBy = "participations")
-    private Collection<Course> courses;
+    private Collection<Course> courses = new ArrayList<>();
 
     public int getId() {
         return id;
