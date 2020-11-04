@@ -1,26 +1,46 @@
 package entity;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 @Embeddable
-public class CommandeId {
+public class CommandeId implements Serializable {
 
-    private int edition_id;
-    private int libraire_id;
+    private static final long serialVerionUID = 1L;
 
-    public int getEdition_id() {
-        return edition_id;
+    @Column(name = "edition_id")
+    private int editionid;
+
+    @Column(name = "librairie_id")
+    private int librairieid;
+
+    public CommandeId() {
     }
 
-    public void setEdition_id(int edition_id) {
-        this.edition_id = edition_id;
+    public int getEditionid() {
+        return editionid;
     }
 
-    public int getLibraire_id() {
-        return libraire_id;
+    public void setEditionid(int editionid) {
+        this.editionid = editionid;
     }
 
-    public void setLibraire_id(int libraire_id) {
-        this.libraire_id = libraire_id;
+    public int getLibrairieid() {
+        return librairieid;
+    }
+
+    public void setLibrairieid(int librairieid) {
+        this.librairieid = librairieid;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }

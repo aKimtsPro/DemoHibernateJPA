@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibrairieUnit");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("demoUnit");
         EntityManager em = emf.createEntityManager();
 
 

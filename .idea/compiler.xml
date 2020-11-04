@@ -6,8 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="exoLibrairie" />
+        <module name="demoComposite" />
+        <module name="ExoLibrairie" />
+        <module name="BasicJPADemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="exo2" target="1.11" />
+      <module name="exoLibrairie" target="1.11" />
+      <module name="test" target="1.11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

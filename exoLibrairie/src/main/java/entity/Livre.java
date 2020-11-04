@@ -1,11 +1,12 @@
 package entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 
 @Entity
 @Table
-public class Livre {
+public class Livre  implements Serializable {
 
     @Id
     private String isbn;

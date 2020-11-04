@@ -13,13 +13,13 @@ public class Participation {
     @Column(name = "participation_id")
     private int id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private Pilote pilote;
 
     @ManyToOne
     private Voiture voiture;
 
-    @ManyToMany(mappedBy = "participations")
+    @ManyToMany(mappedBy = "participations", fetch = FetchType.LAZY)
     private Collection<Course> courses = new ArrayList<>();
 
     public int getId() {

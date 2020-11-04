@@ -1,11 +1,12 @@
 package entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 
 @Entity
 @Table
-public class Librairie {
+public class Librairie  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +36,7 @@ public class Librairie {
 //    )
 //    private Collection<Edition> commandes;
 
-    @OneToMany(mappedBy = "commanditaire")
+    @OneToMany(mappedBy = "librairie")
     private Collection<Commande> commandes;
 
 
